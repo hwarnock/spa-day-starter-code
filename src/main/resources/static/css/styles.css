@@ -1,5 +1,6 @@
 body {
     background-color: pink;
+
 }
 
 div {
@@ -8,6 +9,7 @@ div {
     padding: 10px;
     text-align: center;
     background-color: white;
+
 }
 
 h1 {
@@ -24,3 +26,4 @@ table {
             padding: 10px;
             text-align: center;
 }
+
