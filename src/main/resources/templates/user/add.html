@@ -1,36 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "http://www.thymeleaf.org/">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
-    <title>Sign Up</title>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
 </head>
 <body>
-    <form method = 'post' th:action="@{/user}">
-        <label>
-            Username:
-            <input type = 'text' name = 'username' th:value="${username}">
-        </label>
+<p th:text="${errorMsg}" style="color:red;"></p>
 
-        <label>
-            Email:
-            <input type = 'email' name = 'email' th:value="${email}">
-        </label>
+<form action="/user" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" th:field="${user.username}"><br><br>
 
-        <label>
-            Password:
-            <input type = 'password' name = 'password'>
-        </label>
+    <label for="email">Email:</label>
+    <input id="email" th:field="${user.email}"><br><br>
 
-        <label>
-            Verify Password:
-            <input type = 'password' name = 'verify'>
-        </label>
+    <label for="password1">Password:</label>
+    <input type="password" id="password1" th:field="${user.password1}"><br><br>
 
-        <p th:text="${error}"></p>
+    <label for="password2">Verify Password:</label>
+    <input type="password" id="password2" th:field="${user.password2}"><br><br>
 
-        <input type = 'submit' value = 'Sign Up'>
-    </form>
-
+    <input type="submit" value="Submit">
+</form>
 </body>
 </html>
