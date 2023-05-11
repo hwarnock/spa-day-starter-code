@@ -12,9 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.validation.Valid;
 
 @Controller
+@RequestMapping("user")
 public class UserController {
 
-    @RequestMapping("user")
+    @GetMapping("/add")
     public String displayAddUserForm(Model model){
         model.addAttribute(new User());
         return ("/user/add");
